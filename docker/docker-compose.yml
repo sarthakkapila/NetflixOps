@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - "4566:4566"   # Main LocalStack API endpoint
+      - "4571:4571"   # EC2 service endpoint
+    environment:
+      - SERVICES=ec2
+      - DEFAULT_REGION=us-east-1
+    networks:
+      - localstack_network
+
+networks:
+  localstack_network:
+    driver: bridge
