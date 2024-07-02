@@ -1,6 +1,6 @@
 # NetflixOps
 
-!(assets/NetflixOps.drawio.png)[NetflixOps System Design]
+![NetflixOps System Design](assets/NetflixOps.drawio.png)
 
 
 ## Overview
