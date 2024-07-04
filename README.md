@@ -104,4 +104,4 @@ The docker-compose file has 5 containers
 
 ![shot7](assets/shot7.png)
 
-![shot8](assets/shot8.png)
+
