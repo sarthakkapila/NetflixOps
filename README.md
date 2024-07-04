@@ -10,7 +10,7 @@ This repo contains the code & steps followed to deploy a Netflix clone app using
 
 ### Launching a T2 instance
 - Choose any t2 instance 
-For the project I am going to use ![Local Stack Cloud](https://www.localstack.cloud/) which is used to test AWS apps locally.
+For the project I am going to use https://www.localstack.cloud/ which is used to test AWS apps locally.
 
 - Follow the follwing steps for localstack
 ```
@@ -31,7 +31,7 @@ docker-compose up
 ```
 aws --endpoint-url=http://localhost:4566 ec2 run-instances \
     --profile localstack \
-    --image-id ami-d of t2 \   #ami-df5de72bdb3b for ubuntu 22.04
+    --image-id <ami-id-of-t2> \   #ami-df5de72bdb3b for ubuntu 22.04
     --instance-type t2.micro \
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyInstance}]'
 ```
