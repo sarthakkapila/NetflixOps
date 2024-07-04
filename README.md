@@ -90,12 +90,18 @@ The docker-compose file has 5 containers
 ## :)
 
 
-[shot1](assets/shot6.png)
+![shot1](assets/shot6.png)
 
-[shot2](assets/shot1.png)
-[shot3](assets/shot2.png)
-[shot4](assets/shot3.png)
-[shot5](assets/shot4.png)
-[shot6](assets/shot5.png)
-[shot7](assets/shot7.png)
-[shot8](assets/shot8.png)
+![shot2](assets/shot1.png)
+
+![shot3](assets/shot2.png)
+
+![shot4](assets/shot3.png)
+
+![shot5](assets/shot4.png)
+
+![shot6](assets/shot5.png)
+
+![shot7](assets/shot7.png)
+
+![shot8](assets/shot8.png)
