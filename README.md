@@ -23,7 +23,7 @@
     - Monitoring server
     - Pipelines server
 - For the app i'll be using a Netflix clone [Netflix Clone](https://github.com/gsbarure/netflix-clone-react-typescript) 
->**> [!IMPORTANT]
+> [!IMPORTANT]
 > Make sure you use vpn while using the api or the app as for some reason TMDB doesnt work in India.
 
 
