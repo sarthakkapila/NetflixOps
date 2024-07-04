@@ -84,3 +84,5 @@ chmod +x install_trivy.sh
 
 >**IMP**: You will need vpn if you're browsing from India
 
+
+## Installing Prometheus and Grafana
