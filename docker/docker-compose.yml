@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3'
 
 services:
   localstack:
@@ -11,6 +11,57 @@ services:
       - DEFAULT_REGION=us-east-1
     networks:
       - localstack_network
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    ports:
+      - "8080:8080"
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    networks:
+      - localstack_network
+
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"  # Changed to default Grafana port
+    volumes:
+      - grafana_data:/var/lib/grafana
+    networks:
+      - localstack_network
+
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+    volumes:
+      - prometheus_data:/prometheus
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    networks:
+      - localstack_network
+         
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter
+    ports:
+      - "9100:9100"
+    networks:
+      - localstack_network
+
+  trivy:
+    image: aquasec/trivy:latest
+    command: image python:3.4-alpine
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - localstack_network
+
+volumes:
+  jenkins_home:
+  prometheus_data:
+  grafana_data:
 
 networks:
   localstack_network:
