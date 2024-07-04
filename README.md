@@ -31,7 +31,7 @@ docker-compose up
 ```
 aws --endpoint-url=http://localhost:4566 ec2 run-instances \
     --profile localstack \
-    --image-id <ami-id-of-t2> \   #ami-df5de72bdb3b for ubuntu 22.04
+    --image-id ami-df5de72bdb3b \
     --instance-type t2.micro \
     --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyInstance}]'
 ```
@@ -53,3 +53,34 @@ aws --endpoint-url=http://localhost:4566 ec2 stop-instances --instance-ids <Inst
 
 aws --endpoint-url=http://localhost:4566 ec2 start-instances --instance-ids <Instance-id> --profile localstack
 ```
+
+## Install Jenkins
+
+run jenkins.sh inside the scripts to install jenkins for pipelines.
+```sh
+chmod +x jenkins.sh
+./jenkins.sh
+```
+## Installing SonarQube container
+
+>**Note**: Make sure you have docker installed 
+```sh 
+docker run -d --name sonar -p 9000:9000 sonarqube:lts-community
+```
+## Install Trivy
+Find the script inside the scripts dir.
+
+```sh 
+
+chmod +x install_trivy.sh
+./install_trivy.sh
+
+```
+
+
+## Create a TMDB API Key for movie database
+
+[TMDB Website](https://www.themoviedb.org/)
+
+>**IMP**: You will need vpn if you're browsing from India
+
