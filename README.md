@@ -54,9 +54,9 @@ The docker-compose file has 5 containers
 - Adding email service:
     - Go to your google account manager and generate a password for an app in the security section.
     - Head over to https://localhost:8080/ to jenkins and enter the password for jenkins.
->**NOTE: sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword
-    
-    - Search for email extension and download it 
+>**NOTE**: sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword
+
+- Search for email extension and download it 
 
 ##  Install Plugins like JDK, Sonarqube Scanner, Nodejs, and OWASP Dependency Check
 
