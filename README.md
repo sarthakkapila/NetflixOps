@@ -6,9 +6,11 @@
 ## Overview
 
 
-## Tools/Plugins used
-- Jenkins: for creating pipelines
-- Prometheus and Grafana for monitoring
+## Tools & Plugins used
+- Jenkins
+- Prometheus
+- Grafana
+- Docker
 - SonarQube
 - Owasp
 - Trivy scan
