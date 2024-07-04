@@ -49,3 +49,53 @@ The docker-compose file has 5 containers
 
 - This will contain the config for prometheus monitoring basically all the plugins and the dependencies for prometheus.
 
+## Configure jenkins
+
+- Adding email service:
+    - Go to your google account manager and generate a password for an app in the security section.
+    - Head over to https://localhost:8080/ to jenkins and enter the password for jenkins.
+>**NOTE: sudo docker exec ${CONTAINER_ID or CONTAINER_NAME} cat /var/jenkins_home/secrets/initialAdminPassword
+    
+    - Search for email extension and download it 
+
+##  Install Plugins like JDK, Sonarqube Scanner, Nodejs, and OWASP Dependency Check
+
+- Goto Manage Jenkins →Plugins → Available Plugins →
+
+- Install below plugins
+
+- 1 → Eclipse Temurin Installer (Install without restart)
+
+- 2 → SonarQube Scanner (Install without restart)
+
+- 3 → NodeJs Plugin (Install Without restart)
+
+- Docker, Docker api, Docker Commons, Docker Pipelines, docker-build-step
+- OWASP Dependency Check Plugin 
+
+- Configure all the tools for Java, Nodejs, OWASP, Email, SonarQube.
+
+- Add Global Credentials for Docker & Email using your username and passwords.
+
+- Create a Job
+
+- create a job as Netflix Name, select pipeline and click on ok. 
+
+- Add the script in the Jenkins/jenkinsfile
+
+- Read the file and modify as needed
+
+### Now you'll see that a docker image will be created on your docker hub, now run the container to verify.
+
+## :)
+
+
+[shot1](assets/shot6.png)
+
+[shot2](assets/shot1.png)
+[shot3](assets/shot2.png)
+[shot4](assets/shot3.png)
+[shot5](assets/shot4.png)
+[shot6](assets/shot5.png)
+[shot7](assets/shot7.png)
+[shot8](assets/shot8.png)
