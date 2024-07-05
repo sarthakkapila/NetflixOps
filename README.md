@@ -49,7 +49,7 @@ The docker-compose file has 5 containers
 
 ## Lets configure the prometheus.yml file
 
-- This will contain the config for prometheus monitoring basically all the plugins and the dependencies for prometheus.
+- Checkout docker/prometheus.yml this will contain the config for prometheus monitoring basically all the plugins and the dependencies for prometheus.
 
 ## Configure jenkins
 
